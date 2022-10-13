@@ -1,38 +1,78 @@
-.App {
+html{
+  scroll-behavior: smooth;
+}
+
+.homepage {
   text-align: center;
+  background-image: url("./Images/home-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  background-color: #FFFDE3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  width: 200px;
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dropdown{
+  margin-left: 50px;
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link{
+  color: blue !important;
+  font-family: cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search {
+  width: 400px;
+  outline: none;
+  border-radius: 5px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  position: relative;
+  height: 50px;
+  padding-left: 20px;
 }
+
+input[type=search]:focus {
+  border: 3px outset rgb(51, 0, 255);
+}
+
+.fa-search {
+  position: absolute;
+  right: 3%;
+  width: 10px;
+  height: 9px;
+  color: transparent;
+  text-align: center;
+  top: 4.5%;
+}
+
+
+
+.right-navbar{
+  font-family: cursive;
+  font-size: large;
+}
+
+.footer{
+  background-color: #FFFDE3;
+}
+
+.footer-logo{
+  width: 150px;
+}
+
+.copyright{
+  font-size: 20px;
+  font-weight: 600;
+}
+
