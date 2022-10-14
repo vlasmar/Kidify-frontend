@@ -14,10 +14,11 @@ html{
 
 .navbar{
   background-color: #FFFDE3;
+  padding: 2px !important;
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
   margin-left: 10px;
 }
 
@@ -88,7 +89,7 @@ input[type=search]:focus {
 }
 
 .footer-logo{
-  width: 150px;
+  width: 130px;
 }
 
 .copyright{

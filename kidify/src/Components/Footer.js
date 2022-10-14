@@ -11,7 +11,7 @@ function Footer () {
         display="flex"
         justifyContent="between"
         alignItems="center"
-        className="mx-auto py-4 flex-wrap"
+        className="mx-auto flex-wrap"
         style={{ width: '80%' }}
       >
         <CDBBox display="flex" alignItems="center">
