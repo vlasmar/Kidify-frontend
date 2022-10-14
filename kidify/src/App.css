@@ -3,12 +3,13 @@ html{
 }
 
 .homepage {
-  text-align: center;
-  background-image: url("./Images/home-background.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+    text-align: center;
+    background-image: url("./Images/home-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
 }
 
 .navbar{
@@ -71,6 +72,17 @@ input[type=search]:focus {
   transform: translateY(100px) scale(0) rotateY(180deg);
   opacity: 0;
 }
+
+.aboutpage {
+    text-align: center;
+    background-image: url("./Images/pattern.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 800px;
+}
+
 
 .footer{
   background-color: #FFFDE3;
