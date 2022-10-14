@@ -56,11 +56,20 @@ input[type=search]:focus {
   top: 4.5%;
 }
 
-
-
 .right-navbar{
   font-family: cursive;
   font-size: large;
+}
+
+.show{
+  display: block;
+  transition: 80ms;
+  opacity: 1;
+}
+
+.show.active{
+  transform: translateY(100px) scale(0) rotateY(180deg);
+  opacity: 0;
 }
 
 .footer{
