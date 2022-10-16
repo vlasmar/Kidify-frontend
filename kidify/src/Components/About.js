@@ -59,8 +59,8 @@ function About({ medium }) {
                                     <Card.Body>
                                         <Card.Title>Priyanka Bed</Card.Title>
                                         <Card.Text>Full Stack Developer</Card.Text>
-                                        <Card.Link href='https://www.linkedin.com/in/priyankaben-bed/'>Linkedin</Card.Link>
-                                        <Card.Link href='https://github.com/PriyankaBed'>Gith hub</Card.Link>
+                                        <Card.Link href='https://www.linkedin.com/in/priyankaben-bed/'>linkedin</Card.Link>
+                                        <Card.Link href='https://github.com/PriyankaBed'>github</Card.Link>
                                     </Card.Body>
                                 </Card>{" "}
                             </div>
@@ -70,8 +70,8 @@ function About({ medium }) {
                                     <Card.Body>
                                         <Card.Title>Maria Vlasopoulou</Card.Title>
                                         <Card.Text>Full Stack Developer</Card.Text>
-                                        <Card.Link href='https://www.linkedin.com/in/maria-vlasopoulou-20527b162/'>Linkedin</Card.Link>
-                                        <Card.Link href='https://github.com/vlasmar'>Gith hub</Card.Link>
+                                        <Card.Link href='https://www.linkedin.com/in/maria-vlasopoulou-20527b162/'>linkedin</Card.Link>
+                                        <Card.Link href='https://github.com/vlasmar'>github</Card.Link>
                                     </Card.Body>
                                 </Card>{" "}
                             </div>
