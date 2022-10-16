@@ -1,5 +1,5 @@
-html{
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
 .homepage {
@@ -9,68 +9,68 @@ html{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    height: auto;
 }
 
-.navbar{
-  background-color: #FFFDE3;
-  padding: 2px !important;
+.navbar {
+    background-color: #fffde3;
 }
 
 .logo {
-  width: 150px;
-  margin-left: 10px;
+    width: 200px;
+    margin-left: 10px;
 }
 
-.dropdown{
-  margin-left: 50px;
-  font-size: 25px;
+.dropdown {
+    margin-left: 50px;
+    font-size: 25px;
 }
 
-.nav-link{
-  color: blue !important;
-  font-family: cursive;
+.nav-link {
+    color: blue !important;
+    font-family: cursive;
 }
 
 .search {
-  width: 400px;
-  outline: none;
-  border-radius: 5px;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  position: relative;
-  height: 50px;
-  padding-left: 20px;
+    width: 400px;
+    outline: none;
+    border-radius: 5px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    position: relative;
+    height: 50px;
+    padding-left: 20px;
 }
 
-input[type=search]:focus {
-  border: 3px outset rgb(51, 0, 255);
+input[type="search"]:focus {
+    border: 3px outset rgb(51, 0, 255);
 }
 
 .fa-search {
-  position: absolute;
-  right: 3%;
-  width: 10px;
-  height: 9px;
-  color: transparent;
-  text-align: center;
-  top: 4.5%;
+    position: absolute;
+    right: 3%;
+    width: 10px;
+    height: 9px;
+    color: transparent;
+    text-align: center;
+    top: 4.5%;
 }
 
-.right-navbar{
-  font-family: cursive;
-  font-size: large;
+.right-navbar {
+    font-family: cursive;
+    font-size: large;
 }
 
-.show{
-  display: block;
-  transition: 80ms;
-  opacity: 1;
+.show {
+    display: block;
+    transition: 80ms;
+    opacity: 1;
 }
 
-.show.active{
-  transform: translateY(100px) scale(0) rotateY(180deg);
-  opacity: 0;
+.show.active {
+    transform: translateY(100px) scale(0) rotateY(180deg);
+    opacity: 0;
 }
 
 .aboutpage {
@@ -80,19 +80,29 @@ input[type=search]:focus {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    height: auto;
 }
 
-
-.footer{
-  background-color: #FFFDE3;
+.aboutcards {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
 }
 
-.footer-logo{
-  width: 130px;
+.about_mission {
+    margin-bottom: 15px;
 }
 
-.copyright{
-  font-size: 20px;
-  font-weight: 600;
+.footer {
+    background-color: #fffde3;
 }
 
+.footer-logo {
+    width: 150px;
+}
+
+.copyright {
+    font-size: 20px;
+    font-weight: 600;
+}
