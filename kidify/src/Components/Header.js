@@ -48,20 +48,9 @@ function Header() {
       <Nav className="right-navbar justify-content-end" navbarScroll>
         <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link href="about">About Us</Nav.Link>
-        <Nav.Link href="signup">Sign up</Nav.Link>
-        <Nav.Link onClick={handleShow}>Login</Nav.Link>
+        <Nav.Link onClick={handleShow}>Login/Signup</Nav.Link>
         <Modal show={showLogin} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Login</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Login />
-          </Modal.Body>
-          <Modal.Footer className="justify-content-center">
-            <Button variant="warning" onClick={handleClose}>
-              Login
-            </Button>
-          </Modal.Footer>
+          <Login />
         </Modal>
         <Nav.Link href="/:username">User Profile</Nav.Link>
       </Nav>
