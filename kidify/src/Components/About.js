@@ -4,7 +4,7 @@ import { CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
 import Card from "react-bootstrap/Card";
 import Team1 from "../Images/team_1.jpg";
 
-function About({ medium }) {
+function About() {
     return (
         <div className='aboutpage'>
             <div className='header'>
