@@ -2,11 +2,14 @@ import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Button1 from "../Images/0-3button.png";
+import Button2 from "../Images/4-5button.png";
+import Button3 from "../Images/6-7button.png";
 import Logo from "../Images/kidify-logo.png";
 import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/esm/Button";
 import Login from "./Login";
+import Avatar from 'react-avatar';
+
 
 function Header() {
   const [showLogin, setShowLogin] = useState(false);
@@ -28,15 +31,18 @@ function Header() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <NavDropdown
+            <a href="/preschool"><img src={Button1} width="130px"/></a>{' '}
+            <a href="/grade-k"><img src={Button2} width="130px"/></a>{' '}
+            <a href="/grade-1"><img src={Button3} width="130px" style={{paddingTop: 5}}/></a>{' '}
+              {/*<NavDropdown
                 title="Categories"
-                classname="dropdown category-menu"
+                className="dropdown category-menu"
                 id="navbarScrollingDropdown"
               >
                 <NavDropdown.Item href="preschool">Age 0-3</NavDropdown.Item>
                 <NavDropdown.Item href="grade-k">Age 4-5</NavDropdown.Item>
                 <NavDropdown.Item href="grade-1">Age 6-7</NavDropdown.Item>
-              </NavDropdown>
+  </NavDropdown>*/}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -46,13 +52,13 @@ function Header() {
         <i class="fa fa-search" aria-hidden="true"></i>
       </form>
       <Nav className="right-navbar justify-content-end" navbarScroll>
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="about">About Us</Nav.Link>
-        <Nav.Link onClick={handleShow}>Login/Signup</Nav.Link>
+        <Nav.Link className="navbar-item" href="/">Home</Nav.Link>
+        <Nav.Link className="navbar-item" href="about">About Us</Nav.Link>
+        <Nav.Link className="navbar-item" onClick={handleShow}>Login/Signup</Nav.Link>
         <Modal show={showLogin} onHide={handleClose}>
           <Login />
         </Modal>
-        <Nav.Link href="/username">User Profile</Nav.Link>
+        <Nav.Link href="/:username"><Avatar name="Wim Mostmans" size="50" round="30px"/></Nav.Link>
       </Nav>
     </div>
   );

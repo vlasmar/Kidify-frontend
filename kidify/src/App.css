@@ -14,6 +14,7 @@ html {
 
 .navbar {
     background-color: #fffde3;
+    justify-content: space-around !important;
 }
 
 .logo {
@@ -27,12 +28,12 @@ html {
 }
 
 .nav-link {
-    color: blue !important;
+    color: rgb(0, 0, 0) !important;
     font-family: cursive;
 }
 
 .search {
-    width: 400px;
+    width: 300px;
     outline: none;
     border-radius: 5px;
     border-top: none;
@@ -41,6 +42,10 @@ html {
     position: relative;
     height: 50px;
     padding-left: 20px;
+}
+
+.search-form{
+  padding: 50px 0;
 }
 
 input[type="search"]:focus {
@@ -60,6 +65,17 @@ input[type="search"]:focus {
 .right-navbar {
     font-family: cursive;
     font-size: large;
+}
+
+.nav{
+  align-items: center;
+}
+
+.navbar-item{
+  background-color: #ff8d29;
+  border-radius: 10px;
+  margin: 0.2em;
+  align-items: center;
 }
 
 .show {
@@ -107,7 +123,6 @@ input[type="search"]:focus {
     font-weight: 600;
 }
 
-
 /* Signup page */
 .modal-content{
   background-color: purple !important;
@@ -137,6 +152,7 @@ input[type="search"]:focus {
   opacity: 1;
   margin-bottom: 0.2em;
 }
+
 button {
     font-size: 1.5em;
     margin-right:1em;
@@ -144,9 +160,11 @@ button {
     cursor: pointer;
  
 }
+
 button:focus {
     outline: 0px;
 }
+
 button.active {
     padding-bottom: 10px;
     border-bottom: solid 2px #1059FF;
@@ -189,11 +207,9 @@ button.active {
       border-radius: 20px;
       margin-top: 23px;
       background-color: rgba(16,89,255, 1);
-  
   }
 
   /*Form positioning and animation */
-
   form#registerform {
       left:500px;
       top:-230px;
@@ -207,10 +223,28 @@ button.active {
 
   form, .forgot-panel { 
       position: relative;
-      transition: all .5s ease;
+      transition: all .2s ease;
   }
   #loginBtn, #registerBtn {
     transition: all .2s ease;
     background-color: transparent;
     color: white;
+  }
+
+  /* Profile page */
+  .profile-mainpage{
+    display: flex;
+    width: auto;
+  }
+
+  .profile-right-column{
+    background-image: url(./Images/rainbow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 3em;
+  }
+
+  .playlists-title{
+    padding-left: 1.8em;
   }
