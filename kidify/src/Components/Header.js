@@ -52,7 +52,7 @@ function Header() {
         <Modal show={showLogin} onHide={handleClose}>
           <Login />
         </Modal>
-        <Nav.Link href="/:username">User Profile</Nav.Link>
+        <Nav.Link href="/username">User Profile</Nav.Link>
       </Nav>
     </div>
   );
