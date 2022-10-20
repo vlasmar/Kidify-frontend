@@ -31,13 +31,13 @@ function Header() {
               navbarScroll
             >
               <a href="/preschool">
-                <img src={Button1} width="130px" />
+                <img src={Button1} width="130px" alt="preschool"/>
               </a>{" "}
               <a href="/grade-k">
-                <img src={Button2} width="130px" />
+                <img src={Button2} width="130px" alt="grade-k"/>
               </a>{" "}
               <a href="/grade-1">
-                <img src={Button3} width="130px" style={{ paddingTop: 5 }} />
+                <img src={Button3} width="130px" style={{ paddingTop: 5 }} alt="grade-1"/>
               </a>{" "}
             </Nav>
           </Navbar.Collapse>
