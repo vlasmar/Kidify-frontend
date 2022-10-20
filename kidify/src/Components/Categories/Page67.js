@@ -12,7 +12,7 @@ function Page67({ data }) {
                     .filter((item) => item.category === "6-7")
                     .map((item) => {
                         return (
-                            <div className='card-continer-67 card-continer'>
+                            <div className='card-container-67 card-container'>
                                 <div>
                                     <img src={item.video_img_url} alt={item.title} />
                                     <h4>{item.title}</h4>

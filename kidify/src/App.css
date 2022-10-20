@@ -23,7 +23,7 @@ html {
     /* background-color: #541690; */
 }
 
-.card-continer {
+.card-container {
     width: 350px;
     margin: 15px;
     border: 5px solid rgb(255, 255, 255);
@@ -34,11 +34,11 @@ html {
     background-color: #541690;
 }
 
-.card-continer img {
+.card-container img {
     width: 340px;
 }
 
-.card-continer h4 {
+.card-container h4 {
     padding: 25px;
     text-align: left;
     font-family: cursive;
@@ -48,33 +48,33 @@ html {
 
 /* 0-3, 4-5, 6-7 card container section */
 
-.card-continer-03 {
+.card-container-03 {
     /* background-color: #fce700; */
     background-color: #38e54d;
 }
 
-.card-continer-03 h4 {
+.card-container-03 h4 {
     color: rgb(0, 0, 0);
 }
 
 /*  4-5 card container section */
 
-.card-continer-45 {
+.card-container-45 {
     background-color: #6cd2e0;
     /* background-color: #63beff; */
 }
 
-.card-continer-45 h4 {
+.card-container-45 h4 {
     color: black !important;
 }
 
 /*  6-7 card container section */
-.card-continer-67 {
+.card-container-67 {
     background-color: #fbdf07;
     /* background-color: #ea047e; */
 }
 
-.card-continer-67 h4 {
+.card-container-67 h4 {
     color: black !important;
 }
 

@@ -12,7 +12,7 @@ function Page45({ data }) {
                     .filter((item) => item.category === "4-5")
                     .map((item) => {
                         return (
-                            <div className='card-continer-45 card-continer'>
+                            <div className='card-container-45 card-container'>
                                 <div>
                                     <img src={item.video_img_url} alt={item.title} />
                                     <h4>{item.title}</h4>
