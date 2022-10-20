@@ -12,6 +12,72 @@ html {
     height: auto;
 }
 
+/* home card container section */
+.video-cards {
+    display: flex;
+    margin: 40px;
+    justify-content: flex-start;
+    flex-flow: row;
+    max-width: 100%;
+    flex-wrap: wrap;
+    /* background-color: #541690; */
+}
+
+.card-continer {
+    width: 350px;
+    margin: 15px;
+    border: 5px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #541690;
+}
+
+.card-continer img {
+    width: 340px;
+}
+
+.card-continer h4 {
+    padding: 25px;
+    text-align: left;
+    font-family: cursive;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* 0-3, 4-5, 6-7 card container section */
+
+.card-continer-03 {
+    /* background-color: #fce700; */
+    background-color: #38e54d;
+}
+
+.card-continer-03 h4 {
+    color: rgb(0, 0, 0);
+}
+
+/*  4-5 card container section */
+
+.card-continer-45 {
+    background-color: #6cd2e0;
+    /* background-color: #63beff; */
+}
+
+.card-continer-45 h4 {
+    color: black !important;
+}
+
+/*  6-7 card container section */
+.card-continer-67 {
+    background-color: #fbdf07;
+    /* background-color: #ea047e; */
+}
+
+.card-continer-67 h4 {
+    color: black !important;
+}
+
 .navbar {
     background-color: #fffde3;
     justify-content: space-around !important;
@@ -33,7 +99,7 @@ html {
 }
 
 .search {
-    width: 300px;
+    width: 400px;
     outline: none;
     border-radius: 5px;
     border-top: none;
@@ -44,8 +110,8 @@ html {
     padding-left: 20px;
 }
 
-.search-form{
-  padding: 50px 0;
+.search-form {
+    padding: 50px 0;
 }
 
 input[type="search"]:focus {
@@ -67,15 +133,15 @@ input[type="search"]:focus {
     font-size: large;
 }
 
-.nav{
-  align-items: center;
+.nav {
+    align-items: center;
 }
 
-.navbar-item{
-  background-color: #ff8d29;
-  border-radius: 10px;
-  margin: 0.2em;
-  align-items: center;
+.navbar-item {
+    background-color: #ff8d29;
+    border-radius: 10px;
+    margin: 0.2em;
+    align-items: center;
 }
 
 .show {
@@ -124,8 +190,8 @@ input[type="search"]:focus {
 }
 
 /* Signup page */
-.modal-content{
-  background-color: purple !important;
+.modal-content {
+    background-color: purple !important;
 }
 .container {
     width: 100%;
@@ -136,29 +202,28 @@ input[type="search"]:focus {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-    padding:0 2em;
+    padding: 0 2em;
     border-radius: 5px;
-    box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
-    overflow: hidden; 
-    color:#ffffff;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    color: #ffffff;
     background: rgb(86, 1, 86);
 }
 
 /* Nav buttons */
 .nav-buttons {
-  width: 100%;
-  height: 80px;
-  padding-top: 40px;
-  opacity: 1;
-  margin-bottom: 0.2em;
+    width: 100%;
+    height: 80px;
+    padding-top: 40px;
+    opacity: 1;
+    margin-bottom: 0.2em;
 }
 
 button {
     font-size: 1.5em;
-    margin-right:1em;
-    border:0px;
+    margin-right: 1em;
+    border: 0px;
     cursor: pointer;
- 
 }
 
 button:focus {
@@ -167,87 +232,89 @@ button:focus {
 
 button.active {
     padding-bottom: 10px;
-    border-bottom: solid 2px #1059FF;
-} 
-
- /* footer: forgot section */
- .forgot-panel {
-  position: relative;
-  height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 24px;
-  border-top: solid 1px rgba(255,255,255,.3);    
+    border-bottom: solid 2px #1059ff;
 }
 
-  /* form styling */
-  .form-group input {
-      width: 100%;
-      height: 35px;
-      padding-left: 15px;
-      border: none;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      background: rgba(255,255,255,.5);
-  }
-  .form-group label {
+/* footer: forgot section */
+.forgot-panel {
+    position: relative;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 24px;
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+/* form styling */
+.form-group input {
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.5);
+}
+.form-group label {
     text-transform: uppercase;
-  }
-  input.submit {
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 1em;
-      text-align: center;
-      color: rgba(255,255,255, 1);
-      padding: 8px 0px;
-      width: 100%;
-      height: 35px;
-      border: none;
-      border-radius: 20px;
-      margin-top: 23px;
-      background-color: rgba(16,89,255, 1);
-  }
+}
+input.submit {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 0px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 23px;
+    background-color: rgba(16, 89, 255, 1);
+}
 
-  /*Form positioning and animation */
-  form#registerform {
-      left:500px;
-      top:-230px;
-      position:relative;
-  }
+/*Form positioning and animation */
+form#registerform {
+    left: 500px;
+    top: -230px;
+    position: relative;
+}
 
-  .forgot-panel {
-      margin-top:-300px;
-      color:gray;
-  }
+.forgot-panel {
+    margin-top: -300px;
+    color: gray;
+}
 
-  form, .forgot-panel { 
-      position: relative;
-      transition: all .2s ease;
-  }
-  #loginBtn, #registerBtn {
-    transition: all .2s ease;
+form,
+.forgot-panel {
+    position: relative;
+    transition: all 0.2s ease;
+}
+#loginBtn,
+#registerBtn {
+    transition: all 0.2s ease;
     background-color: transparent;
     color: white;
-  }
+}
 
-  /* Profile page */
-  .profile-mainpage{
+/* Profile page */
+.profile-mainpage {
     display: flex;
     width: auto;
-  }
+}
 
-  .profile-right-column{
+.profile-right-column {
     background-image: url(./Images/rainbow.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
     padding: 3em;
-  }
+}
 
-  .playlists-title{
+.playlists-title {
     padding-left: 1.8em;
-  }
+}
 
 .agespage {
     text-align: center;
@@ -256,5 +323,5 @@ button.active {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: 800px;
+    height: auto;
 }

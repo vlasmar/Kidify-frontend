@@ -12,16 +12,16 @@ import AdminPage from "./Components/AdminPage/AdminPage";
 import VideoPage from "./Components/VideoPage";
 
 function App() {
-  const [data, setData] = useState([]);
+    const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:4000/videos`)
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((err) => alert(err));
-  }, []);
+    useEffect(() => {
+        axios
+            .get(`http://localhost:4000/videos`)
+            .then((response) => {
+                setData(response.data);
+            })
+            .catch((err) => alert(err));
+    }, []);
 
   return (
     <div className="wrapper">

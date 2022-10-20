@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import { NavLink } from "react-router-dom";
+import { Container, Col, Row, Button } from "react-bootstrap";
 
 function Homepage({ data }) {
   return (
@@ -13,20 +14,19 @@ function Homepage({ data }) {
           {data.map((dataItem) => {
             return (
                 <NavLink to={`/player/${dataItem._id}`}>
-              <div key={dataItem.title}>
+              <div className="card-container" key={dataItem.title}>
                 <img src={dataItem.video_img_url} alt={dataItem.title}/>
                 <h4>{dataItem.title}</h4>
               </div>
               </NavLink>
             );
           })}
+          <div className='footer'>
+             <Footer />
+          </div>
+          </div>
         </div>
-      </div>
-      <div className="footer">
-        <Footer />
-      </div>
-    </div>
-  );
+    );
 }
 
 export default Homepage;
