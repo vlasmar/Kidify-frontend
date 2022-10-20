@@ -1,8 +1,8 @@
 import React from 'react';
-import youtube from "../apis/youtube";
-import SearchBar from "../Components/Search/SearchBar";
-import VideoList from "../Components/Search/VideoList";
-import VideoDetail from "../Components/Search/VideoDetail";
+import youtube from "../../apis/youtube";
+import SearchBar from "./Search/SearchBar";
+import VideoList from "./Search/VideoList";
+import VideoDetail from "./Search/VideoDetail";
 
 class AdminPage extends React.Component {
   state = {

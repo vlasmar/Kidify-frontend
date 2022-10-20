@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { NavLink } from "react-router-dom";
 
 function Homepage({ data }) {
   return (
@@ -11,10 +12,12 @@ function Homepage({ data }) {
         <div className="video-cards">
           {data.map((dataItem) => {
             return (
+                <NavLink to={`/player/${dataItem._id}`}>
               <div key={dataItem.title}>
-                <img src={dataItem.video_img_url} />
+                <img src={dataItem.video_img_url} alt={dataItem.title}/>
                 <h4>{dataItem.title}</h4>
               </div>
+              </NavLink>
             );
           })}
         </div>
