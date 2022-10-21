@@ -20,6 +20,7 @@ html {
     flex-flow: row;
     max-width: 100%;
     flex-wrap: wrap;
+    align-items: stretch;
     /* background-color: #541690; */
 }
 
@@ -28,7 +29,6 @@ html {
     margin: 15px;
     border: 5px solid rgb(255, 255, 255);
     display: flex;
-    align-items: center;
     justify-content: center;
     border-radius: 10px;
     background-color: #541690;
@@ -39,11 +39,22 @@ html {
 }
 
 .card-container h4 {
-    padding: 25px;
+    padding: 20px;
     text-align: left;
     font-family: cursive;
     font-weight: 500;
     color: #ffffff;
+    flex-grow: 1;
+}
+
+.card-container a {
+    text-decoration: none;
+}
+
+.playlist_icon img {
+    width: 80px;
+    float: right;
+    margin: 5px;
 }
 
 /* 0-3, 4-5, 6-7 card container section */
@@ -76,6 +87,54 @@ html {
 
 .card-container-67 h4 {
     color: black !important;
+}
+
+.videopage {
+    background-color: #541690;
+}
+
+.video_player {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.video_details {
+    font-family: cursive;
+    color: #fffde3;
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: left;
+}
+
+.video_player h2 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+}
+
+.video_title {
+    display: flex;
+}
+
+.video_title img {
+    display: flex;
+}
+
+.video_player h4 {
+    font-size: 22px;
+    margin-bottom: 1rem;
+    margin-left: 25px;
+}
+
+.video_description,
+h5 {
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.video_details hr {
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
 }
 
 .navbar {
