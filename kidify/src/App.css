@@ -34,6 +34,12 @@ html {
     background-color: #541690;
 }
 
+.cardbody{
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+}
+
 .card-container img {
     width: 340px;
 }
@@ -249,9 +255,6 @@ input[type="search"]:focus {
 }
 
 /* Signup page */
-.modal-content {
-    background-color: purple !important;
-}
 .container {
     width: 100%;
     padding-left: 0% !important;
@@ -261,19 +264,19 @@ input[type="search"]:focus {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 2em;
+    padding: 1.5em 2em;
     border-radius: 5px;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    color: #ffffff;
-    background: rgb(86, 1, 86);
+    color: black;
+    background: white;
 }
 
 /* Nav buttons */
 .nav-buttons {
     width: 100%;
     height: 80px;
-    padding-top: 40px;
+    padding-top: 20px;
     opacity: 1;
     margin-bottom: 0.2em;
 }
@@ -313,7 +316,7 @@ button.active {
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.293);
 }
 .form-group label {
     text-transform: uppercase;
@@ -323,7 +326,7 @@ input.submit {
     text-transform: uppercase;
     font-size: 1em;
     text-align: center;
-    color: rgba(255, 255, 255, 1);
+    color: black;
     padding: 8px 0px;
     width: 100%;
     height: 35px;
@@ -336,7 +339,7 @@ input.submit {
 /*Form positioning and animation */
 form#registerform {
     left: 500px;
-    top: -230px;
+    top: -180px;
     position: relative;
 }
 
@@ -354,7 +357,7 @@ form,
 #registerBtn {
     transition: all 0.2s ease;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 /* Profile page */

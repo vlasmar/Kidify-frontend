@@ -1,5 +1,6 @@
 import Header from "../Header";
 import Footer from "../Footer";
+import VideoItem from "../VideoItem";
 
 function Page67({ data }) {
     return (
@@ -14,8 +15,7 @@ function Page67({ data }) {
                         return (
                             <div className='card-container-67 card-container'>
                                 <div>
-                                    <img src={item.video_img_url} alt={item.title} />
-                                    <h4>{item.title}</h4>
+                                    <VideoItem video={item}/>
                                 </div>
                             </div>
                         );

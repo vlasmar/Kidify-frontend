@@ -1,6 +1,8 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -10,7 +12,22 @@ import {
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
 
-function Profile({ medium }) {
+function Profile() {
+  const [userInfo, setUserInfo] = useState();
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios
+        .get(`http://localhost:4000/users/${id}`)
+        .then((response) => {
+            console.log(response.data);
+            setUserInfo(response.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+}, [id]);
+
   return (
     <div className="profile">
       <div className="header">
@@ -20,7 +37,7 @@ function Profile({ medium }) {
       <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
       <CDBSidebar textColor="#fff" backgroundColor="#333" margin='10px'>
         <CDBSidebarHeader>
-        <h4>Hello, username! </h4>
+        <h4>Hello, {userInfo.first_name} </h4>
         </CDBSidebarHeader>
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>

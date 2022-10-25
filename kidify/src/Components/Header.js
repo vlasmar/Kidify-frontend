@@ -7,7 +7,8 @@ import Button2 from "../Images/4-5button.png";
 import Button3 from "../Images/6-7button.png";
 import Logo from "../Images/kidify-logo.png";
 import Modal from "react-bootstrap/Modal";
-import Login from "./Login";
+import { Button } from "bootstrap";
+import LoginSignup from "./LoginSignup";
 import Avatar from "react-avatar";
 
 function Header() {
@@ -31,13 +32,18 @@ function Header() {
               navbarScroll
             >
               <a href="/preschool">
-                <img src={Button1} width="130px" alt="preschool"/>
+                <img src={Button1} width="130px" alt="preschool" />
               </a>{" "}
               <a href="/grade-k">
-                <img src={Button2} width="130px" alt="grade-k"/>
+                <img src={Button2} width="130px" alt="grade-k" />
               </a>{" "}
               <a href="/grade-1">
-                <img src={Button3} width="130px" style={{ paddingTop: 5 }} alt="grade-1"/>
+                <img
+                  src={Button3}
+                  width="130px"
+                  style={{ paddingTop: 5 }}
+                  alt="grade-1"
+                />
               </a>{" "}
             </Nav>
           </Navbar.Collapse>
@@ -58,7 +64,7 @@ function Header() {
           Login/Signup
         </Nav.Link>
         <Modal show={showLogin} onHide={handleClose}>
-          <Login />
+          <LoginSignup handleClose={handleClose}/>
         </Modal>
         <Nav.Link href="/:username">
           <Avatar name="Wim Mostmans" size="50" round="30px" />
