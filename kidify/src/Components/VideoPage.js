@@ -30,11 +30,11 @@ const VideoPage = () => {
             </div>
             {videoInfo && (
                 <div className='video_player'>
-                    <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} />
+                    <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} modestBranding={1} />
                     <div className='video_details'>
                         <div className='video_title'>
                             <h2>{videoInfo.title}</h2>
-                            <img src={FavoritePressed} src={Favorite} width='80px' alt='favorite' />
+                            <img src={Favorite} width='80px' alt='favorite' />
                             {/* <img src={FavoritePressed} width='80px' alt='favorite' /> */}
                         </div>
                         <hr />
