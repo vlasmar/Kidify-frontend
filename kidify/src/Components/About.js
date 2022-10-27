@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import { CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
+import { CDBBox, CDBBtn, CDBIcon } from "cdbreact";
 import Card from "react-bootstrap/Card";
 import Team1 from "../Images/team_1.jpg";
 
@@ -59,13 +59,13 @@ function About() {
                                     <Card.Body>
                                         <Card.Title>Priyanka Bed</Card.Title>
                                         <Card.Text>Full Stack Developer</Card.Text>
-                                        <CDBBox display="flex" className="justify-content-center gap-4">
-                                        <CDBBtn flat color="dark" className="p-2 text-decoration-none" href="https://www.linkedin.com/in/priyankaben-bed/">
-                                            <CDBIcon fab icon="linkedin-in" />
-                                        </CDBBtn>
-                                        <CDBBtn flat color="dark" className="p-2 text-decoration-none" href="https://github.com/PriyankaBed">
-                                            <CDBIcon fab icon="github" />
-                                        </CDBBtn>
+                                        <CDBBox display='flex' className='justify-content-center gap-4'>
+                                            <CDBBtn flat color='dark' className='p-2 text-decoration-none' href='https://www.linkedin.com/in/priyankaben-bed/'>
+                                                <CDBIcon fab icon='linkedin-in' />
+                                            </CDBBtn>
+                                            <CDBBtn flat color='dark' className='p-2 text-decoration-none' href='https://github.com/PriyankaBed'>
+                                                <CDBIcon fab icon='github' />
+                                            </CDBBtn>
                                         </CDBBox>
                                     </Card.Body>
                                 </Card>{" "}
@@ -76,13 +76,13 @@ function About() {
                                     <Card.Body>
                                         <Card.Title>Maria Vlasopoulou</Card.Title>
                                         <Card.Text>Full Stack Developer</Card.Text>
-                                        <CDBBox display="flex" className="justify-content-center gap-4">
-                                        <CDBBtn flat color="dark" className="p-2 text-decoration-none" href="https://www.linkedin.com/in/maria-vlasopoulou-20527b162/">
-                                            <CDBIcon fab icon="linkedin-in" />
-                                        </CDBBtn>
-                                        <CDBBtn flat color="dark" className="p-2 text-decoration-none" href="https://github.com/vlasmar">
-                                            <CDBIcon fab icon="github" />
-                                        </CDBBtn>
+                                        <CDBBox display='flex' className='justify-content-center gap-4'>
+                                            <CDBBtn flat color='dark' className='p-2 text-decoration-none' href='https://www.linkedin.com/in/maria-vlasopoulou-20527b162/'>
+                                                <CDBIcon fab icon='linkedin-in' />
+                                            </CDBBtn>
+                                            <CDBBtn flat color='dark' className='p-2 text-decoration-none' href='https://github.com/vlasmar'>
+                                                <CDBIcon fab icon='github' />
+                                            </CDBBtn>
                                         </CDBBox>
                                     </Card.Body>
                                 </Card>{" "}
