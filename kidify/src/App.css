@@ -4,7 +4,11 @@ html {
 
 .homepage {
     text-align: center;
-    background-image: url("./Images/home-background.png");
+    /* background-image: url("./Images/start_bg.jpg"); */
+    /* background-image: url("./Images/pattern.jpg"); */
+    /* background-image: url("./Images/moon_bg.jpg"); */
+    background-image: url("./Images/rainbow.jpg");
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -15,41 +19,42 @@ html {
 /* home card container section */
 .video-cards {
     display: flex;
-    margin: 40px;
-    justify-content: flex-start;
+    margin: 30px 0px;
     flex-flow: row;
-    max-width: 100%;
     flex-wrap: wrap;
     align-items: stretch;
     /* background-color: #541690; */
 }
 
 .card-container {
-    width: 350px;
+    width: 22.5%;
     margin: 15px;
-    border: 5px solid rgb(255, 255, 255);
+    border: 3.5px solid rgb(42, 41, 41);
     display: flex;
     justify-content: center;
-    border-radius: 10px;
-    background-color: #541690;
+    border-radius: 8px;
+    /* background-color: #541690; */
 }
 
-.cardbody{
-    display: flex;
-    flex-direction: column;
-    min-height: 250px;
+.card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    position: relative;
+    height: 200px;
 }
 
 .card-container img {
-    width: 340px;
+    width: 100%;
 }
 
 .card-container h4 {
-    padding: 20px;
+    padding: 15px;
     text-align: left;
     font-family: cursive;
     font-weight: 500;
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: black;
     flex-grow: 1;
 }
 
@@ -57,27 +62,33 @@ html {
     text-decoration: none;
 }
 
+.playlist_icon {
+    position: absolute;
+    bottom: 10px;
+    right: 2%;
+}
+
 .playlist_icon img {
-    width: 80px;
     float: right;
-    margin: 5px;
+    width: 60px;
 }
 
 /* 0-3, 4-5, 6-7 card container section */
 
 .card-container-03 {
     /* background-color: #fce700; */
-    background-color: #38e54d;
+    background-color: #eeeeee;
 }
 
 .card-container-03 h4 {
-    color: rgb(0, 0, 0);
+    color: #000000;
 }
 
 /*  4-5 card container section */
 
 .card-container-45 {
-    background-color: #6cd2e0;
+    background-color: #ccf2f4;
+    /* background-color: #6cd2e0; */
     /* background-color: #63beff; */
 }
 
@@ -87,7 +98,8 @@ html {
 
 /*  6-7 card container section */
 .card-container-67 {
-    background-color: #fbdf07;
+    background-color: #f7fdb1;
+    /* background-color: #fffdbb; */
     /* background-color: #ea047e; */
 }
 
@@ -144,8 +156,15 @@ h5 {
 }
 
 .navbar {
-    background-color: #fffde3;
+    /* background-color: #ffd9c0; */
+    background-color: #f9ffea;
     justify-content: space-around !important;
+}
+
+.navbar.shadow {
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 
 .logo {
@@ -173,6 +192,7 @@ h5 {
     position: relative;
     height: 50px;
     padding-left: 20px;
+    border: black 2px solid;
 }
 
 .search-form {
@@ -180,7 +200,7 @@ h5 {
 }
 
 input[type="search"]:focus {
-    border: 3px outset rgb(51, 0, 255);
+    border: 3px outset #8c4fc9;
 }
 
 .fa-search {
@@ -203,10 +223,22 @@ input[type="search"]:focus {
 }
 
 .navbar-item {
-    background-color: #ff8d29;
+    /* background: rgb(184, 238, 174);
+    background: radial-gradient(circle, rgba(184, 238, 174, 0.7427564775910365) 0%, rgba(231, 233, 148, 1) 100%); */
+    /* background: rgb(193, 233, 148);
+    background: linear-gradient(52deg, rgba(193, 233, 148, 1) 37%, rgba(174, 238, 218, 0.9416360294117647) 77%); */
+    background-color: rgb(255, 255, 255);
+    /* background: linear-gradient(52deg, rgba(255, 124, 124, 1) 41%, rgba(185, 0, 91, 0.6083026960784313) 68%); */
+    /* background: rgb(193, 233, 148);
+    background: linear-gradient(52deg, rgba(193, 233, 148, 1) 37%, rgba(174, 238, 218, 0.9416360294117647) 77%); */
+    background-color: #781c68;
     border-radius: 10px;
     margin: 0.2em;
     align-items: center;
+}
+
+.navbar-item H5 {
+    color: rgb(255, 255, 255);
 }
 
 .show {
@@ -239,6 +271,14 @@ input[type="search"]:focus {
 
 .about_mission {
     margin-bottom: 15px;
+}
+
+.aboutcard_1 .card {
+    --bs-card-spacer-y: 3rem;
+}
+
+.aboutcard_2 .card {
+    --bs-card-spacer-y: 3rem;
 }
 
 .footer {
