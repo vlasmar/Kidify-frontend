@@ -12,66 +12,57 @@ import LoginSignup from "./LoginSignup";
 import Avatar from "react-avatar";
 
 function Header() {
-  const [showLogin, setShowLogin] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
 
-  const handleClose = () => setShowLogin(false);
-  const handleShow = () => setShowLogin(true);
+    const handleClose = () => setShowLogin(false);
+    const handleShow = () => setShowLogin(true);
 
-  return (
-    <div className="navbar">
-      <Navbar expand="lg">
-        <a href="/" className="d-flex align-items-center p-0 text-dark">
-          <img className="logo" src={Logo} alt="logo" />
-        </a>
-        <Container fluid>
-          <Navbar.Toggle aria-controls="navbarScroll" />
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <a href="/preschool">
-                <img src={Button1} width="130px" alt="preschool" />
-              </a>{" "}
-              <a href="/grade-k">
-                <img src={Button2} width="130px" alt="grade-k" />
-              </a>{" "}
-              <a href="/grade-1">
-                <img
-                  src={Button3}
-                  width="130px"
-                  style={{ paddingTop: 5 }}
-                  alt="grade-1"
-                />
-              </a>{" "}
+    return (
+        <div className='navbar'>
+            <Navbar expand='lg'>
+                <a href='/' className='d-flex align-items-center p-0 text-dark'>
+                    <img className='logo' src={Logo} alt='logo' />
+                </a>
+                <Container fluid>
+                    <Navbar.Toggle aria-controls='navbarScroll' />
+                    <Navbar.Collapse id='navbarScroll'>
+                        <Nav className='me-auto my-2 my-lg-0' style={{ maxHeight: "100px" }} navbarScroll>
+                            <a href='/preschool'>
+                                <img src={Button1} width='130px' alt='preschool' />
+                            </a>{" "}
+                            <a href='/grade-k'>
+                                <img src={Button2} width='130px' alt='grade-k' />
+                            </a>{" "}
+                            <a href='/grade-1'>
+                                <img src={Button3} width='130px' style={{ paddingTop: 5 }} alt='grade-1' />
+                            </a>{" "}
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+            <form className='search-form'>
+                <input className='search' type='search' placeholder='Search...' />
+                <i className='fa fa-search' aria-hidden='true'></i>
+            </form>
+            <Nav className='right-navbar justify-content-end' navbarScroll>
+                <Nav.Link className='navbar-item text-white' href='/'>
+                    Home
+                </Nav.Link>
+                <Nav.Link className='navbar-item text-white' href='about'>
+                    About Us
+                </Nav.Link>
+                <Nav.Link className='navbar-item text-white' onClick={handleShow}>
+                    Login/Signup
+                </Nav.Link>
+                <Modal show={showLogin} onHide={handleClose}>
+                    <LoginSignup handleClose={handleClose} />
+                </Modal>
+                <Nav.Link href='/:username'>
+                    <Avatar name='Wim Mostmans' size='50' round='30px' />
+                </Nav.Link>
             </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <form className="search-form">
-        <input className="search" type="search" placeholder="Search..." />
-        <i className="fa fa-search" aria-hidden="true"></i>
-      </form>
-      <Nav className="right-navbar justify-content-end" navbarScroll>
-        <Nav.Link className="navbar-item" href="/">
-          Home
-        </Nav.Link>
-        <Nav.Link className="navbar-item" href="about">
-          About Us
-        </Nav.Link>
-        <Nav.Link className="navbar-item" onClick={handleShow}>
-          Login/Signup
-        </Nav.Link>
-        <Modal show={showLogin} onHide={handleClose}>
-          <LoginSignup handleClose={handleClose}/>
-        </Modal>
-        <Nav.Link href="/:username">
-          <Avatar name="Wim Mostmans" size="50" round="30px" />
-        </Nav.Link>
-      </Nav>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default Header;
