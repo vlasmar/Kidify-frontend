@@ -4,7 +4,7 @@ import { useSpring, animated } from "react-spring";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
-const LoginSignup = ({handleClose}) => {
+const LoginSignup = ({handleClose, setUser}) => {
   const navigate = useNavigate();
   
   const [registrationFormStatus, setRegistartionFormStatus] = useState(true);
@@ -36,9 +36,12 @@ const LoginSignup = ({handleClose}) => {
 
   const onRegisterSubmit = (data) => {
     axios
-      .post(`http://localhost:4000/auth/signup`, data)
+      .post(`http://localhost:4000/auth/signup`, data, { 
+        withCredentials: true
+      })
       .then((response) => {
         console.log(response.data);
+        setUser(response.data)
         handleClose();
         navigate("/");
       })
@@ -48,9 +51,12 @@ const LoginSignup = ({handleClose}) => {
   const onLoginSubmit = (data, e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:4000/auth/login`, data)
+      .post(`http://localhost:4000/auth/login`, data, { 
+        withCredentials: true
+      })
       .then((response) => {
         console.log(response.data);
+        setUser(response.data)
         handleClose();
         navigate("/");
       })

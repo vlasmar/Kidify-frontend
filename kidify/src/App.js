@@ -10,11 +10,13 @@ import Page45 from "./Components/Categories/Page45";
 import Page67 from "./Components/Categories/Page67";
 import AdminPage from "./Components/AdminPage/AdminPage";
 import VideoPage from "./Components/VideoPage";
-import Signup from "./Components/Signup";
 import LoginSignup from "./Components/LoginSignup";
+import FavoritesList from "./Components/FavoritesList";
+import Protected from "./Components/Protected";
 
 function App() {
   const [data, setData] = useState([]);
+  const [user, setUser] = useState();
 
   useEffect(() => {
     axios
@@ -23,6 +25,18 @@ function App() {
         setData(response.data);
       })
       .catch((err) => alert(err));
+
+    axios
+      .get(`http://localhost:4000/users/profile`, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        console.log(response.data)
+        setUser(response.data);
+      })
+      .catch((err) => {
+        console.log(err)
+      });
   }, []);
 
   return (
@@ -31,13 +45,18 @@ function App() {
         <Route path="/" element={<Homepage data={data} />} />
         <Route path="/about" element={<About />} />
         <Route path="/auth/signup" element={<LoginSignup />} />
-        <Route path="/:username" element={<Profile />} />
+        <Route path="/profile" element={<Protected user={user} />} >
+          <Route index element={<Profile />} />
+          <Route path="favorites" element={<FavoritesList />} />
+          </Route>
         <Route path="/preschool" element={<Page03 data={data} />} />
         <Route path="/grade-k" element={<Page45 data={data} />} />
         <Route path="/grade-1" element={<Page67 data={data} />} />
         <Route path="/upload_video" element={<AdminPage />} />
         <Route path="/player/:id" element={<VideoPage />} />
       </Routes>
+
+      
     </div>
   );
 }

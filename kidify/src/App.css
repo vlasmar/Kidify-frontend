@@ -144,6 +144,19 @@ html {
     margin-left: 25px;
 }
 
+.gIlfQu:hover{
+    transform: scale(1.3) !important;
+}
+
+.favorite-button {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.favorite-button img {
+    width: 50px;
+}
+
 .video_description,
 h5 {
     font-size: 20px;
@@ -234,10 +247,12 @@ input[type="search"]:focus {
     background-color: #781c68;
     border-radius: 10px;
     margin: 0.2em;
+    padding: 0.5em;
     align-items: center;
+    text-decoration: none;
 }
 
-.navbar-item H5 {
+.navbar-item h5 {
     color: rgb(255, 255, 255);
 }
 
