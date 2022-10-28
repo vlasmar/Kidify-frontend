@@ -1,8 +1,7 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import YouTube from "@u-wave/react-youtube";
-import Favorite from "../Images/favorite.png";
-import FavoritePressed from "../Images/favorite-pressed.png";
+import FavoriteButton from "./FavoriteButton";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -30,12 +29,11 @@ const VideoPage = () => {
             </div>
             {videoInfo && (
                 <div className='video_player'>
-                    <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} modestBranding={1} />
+                    <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} modestBranding={1}/>
                     <div className='video_details'>
                         <div className='video_title'>
                             <h2>{videoInfo.title}</h2>
-                            <img src={Favorite} width='80px' alt='favorite' />
-                            {/* <img src={FavoritePressed} width='80px' alt='favorite' /> */}
+                            <FavoriteButton userFrom={localStorage.getItem('userId')} videoId = {videoInfo._id} videoInfo = {videoInfo}  />
                         </div>
                         <hr />
                         <h4>{videoInfo.artist}</h4>
