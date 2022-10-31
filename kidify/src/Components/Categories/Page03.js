@@ -1,15 +1,10 @@
-import Header from "../Header";
-import Footer from "../Footer";
 import VideoItem from "../VideoItem";
 
 function Page03({ data }) {
     return (
         <div className='agespage'>
-            <div className='header'>
-                <Header />
-            </div>
             <div className='container'>
-                <h1 style={{ fontFamily: "cursive", margin: "20px" }}>Ages 0-3</h1>
+                <h1 style={{ fontFamily: "cursive", padding: "30px" }}>Ages 0-3</h1>
                 <div className='video-cards'>
                     {data
                         .filter((item) => item.category === "0-3")
@@ -23,9 +18,6 @@ function Page03({ data }) {
                             );
                         })}
                 </div>
-            </div>
-            <div className='footer'>
-                <Footer />
             </div>
         </div>
     );
