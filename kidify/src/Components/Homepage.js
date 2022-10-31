@@ -1,13 +1,8 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import VideoItem from "./VideoItem";
 
 function Homepage({ data }) {
   return (
     <div className="homepage">
-      <div className="header">
-        <Header />
-      </div>
       <div className="container">
         <div className="video-cards">
           {data.map((dataItem) => {
@@ -18,9 +13,6 @@ function Homepage({ data }) {
             );
           })}
         </div>
-      </div>
-      <div className="footer">
-        <Footer />
       </div>
     </div>
   );

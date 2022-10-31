@@ -1,5 +1,3 @@
-import Header from "./Header";
-import Footer from "./Footer";
 import YouTube from "@u-wave/react-youtube";
 import FavoriteButton from "./FavoriteButton";
 import { useState, useEffect } from "react";
@@ -24,9 +22,6 @@ const VideoPage = () => {
 
     return (
         <div className='videopage'>
-            <div className='header'>
-                <Header />
-            </div>
             {videoInfo && (
                 <div className='video_player'>
                     <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} modestBranding={1}/>
@@ -42,9 +37,6 @@ const VideoPage = () => {
                     </div>
                 </div>
             )}
-            <div className='footer'>
-                <Footer />
-            </div>
         </div>
     );
 };
