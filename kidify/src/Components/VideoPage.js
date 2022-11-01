@@ -24,11 +24,11 @@ const VideoPage = () => {
         <div className='videopage'>
             {videoInfo && (
                 <div className='video_player'>
-                    <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} modestBranding={1}/>
+                    <YouTube video={videoInfo.video_url_id} width={1100} height={700} autoplay controls={true} modestBranding={1} />
                     <div className='video_details'>
                         <div className='video_title'>
                             <h2>{videoInfo.title}</h2>
-                            <FavoriteButton userFrom={localStorage.getItem('userId')} videoId = {videoInfo._id} videoInfo = {videoInfo}  />
+                            <FavoriteButton userFrom={localStorage.getItem("userId")} videoId={videoInfo._id} videoInfo={videoInfo} />
                         </div>
                         <hr />
                         <h4>{videoInfo.artist}</h4>
