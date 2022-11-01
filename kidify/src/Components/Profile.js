@@ -104,10 +104,10 @@ function Profile() {
             </CDBSidebarContent>
           </CDBSidebar>
         </div>
-        <div className="profile-right-column">
-          My Favorites
-          <FavoritesList />
-        </div>
+        <div className='profile-right-column'>
+                    <h1 style={{ fontFamily: "cursive", padding: "20px" }}>My Favorites</h1>
+                    <FavoritesList />
+                </div>
       </div>
     </div>
   );
