@@ -62,16 +62,20 @@ function App() {
           path="/auth/signup"
           element={<LoginSignup setUser={setUser} />}
         />
+        <Route
+          path="/auth/logout"
+          element={<Homepage data={shownData} user={user} setUser={setUser}/>}
+        />
         <Route path="/profile" element={<Protected user={user} />}>
-          <Route index element={<Profile />} />
-          <Route path="favorites" element={<FavoritesList />} />
-          
+          <Route index element={<Profile loading={loading}/>} />
+          <Route path="favorites" element={<FavoritesList user={user}/>} />
+          <Route path="playlists" element={<Playlist />} />
         </Route>
         <Route path="/preschool" element={<Page03 data={shownData} />} />
         <Route path="/grade-k" element={<Page45 data={shownData} />} />
         <Route path="/grade-1" element={<Page67 data={shownData} />} />
         <Route path="/upload_video" element={<AdminPage />} />
-        <Route path="/player/:id" element={<VideoPage />} />
+        <Route path="/player/:id" element={<VideoPage user={user}/>} />
       </Routes>
       <div className="footer">
         <Footer />

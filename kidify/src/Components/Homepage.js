@@ -5,9 +5,9 @@ function Homepage({ data }) {
     <div className="homepage">
       <div className="container">
         <div className="video-cards">
-          {data.map((dataItem) => {
+          {data.map((dataItem, index) => {
             return (
-              <div className="card-container">
+              <div className="card-container" key={index}>
                 <VideoItem video={dataItem} />
               </div>
             );

@@ -8,10 +8,11 @@ import {
   CDBSidebarMenuItem,
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
-import FavoritesList from "./FavoritesList";
+import VideoItem from "./VideoItem";
 
-function Profile() {
+function Profile({ user }) {
   const [userInfo, setUserInfo] = useState({});
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     axios
@@ -25,7 +26,31 @@ function Profile() {
       .catch((err) => {
         console.log(err);
       });
+
+    axios
+      .get(`http://localhost:4000/users/profile/favorites`, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        setFavorites(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
+
+  const logout = () => {
+    axios
+      .get(`http://localhost:4000/auth/logout`, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        setUserInfo(null);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="profile">
@@ -43,58 +68,39 @@ function Profile() {
             </CDBSidebarHeader>
             <CDBSidebarContent className="sidebar-content">
               <CDBSidebarMenu>
-                <NavLink
-                  exact
-                  to="/create_playlist"
-                  activeClassName="activeClicked"
-                >
+                <NavLink to="/create_playlist" activeclassname="activeClicked">
                   <CDBSidebarMenuItem textFontSize="18px">
                     Create new playlist +
                   </CDBSidebarMenuItem>
                 </NavLink>
                 <p className="playlists-title">My Playlists</p>
-                <NavLink
-                  exact
-                  to="/:id_playlist"
-                  activeClassName="activeClicked"
-                >
+                <NavLink to="/:id_playlist" activeclassname="activeClicked">
                   <CDBSidebarMenuItem textFontSize="18px" className="ps-5">
                     Playlist 1
                   </CDBSidebarMenuItem>
                 </NavLink>
-                <NavLink
-                  exact
-                  to="/:id_playlist"
-                  activeClassName="activeClicked"
-                >
+                <NavLink to="/:id_playlist" activeclassname="activeClicked">
                   <CDBSidebarMenuItem textFontSize="18px" className="ps-5">
                     Playlist 2
                   </CDBSidebarMenuItem>
                 </NavLink>
-                <NavLink
-                  exact
-                  to="/:id_playlist"
-                  activeClassName="activeClicked"
-                >
+                <NavLink to="/:id_playlist" activeclassname="activeClicked">
                   <CDBSidebarMenuItem textFontSize="18px" className="ps-5">
                     Playlist 3
                   </CDBSidebarMenuItem>
                 </NavLink>
                 <NavLink
-                  exact
-                  to="/users/profile/favorites"
-                  target="_blank"
-                  activeClassName="activeClicked"
+                  to="/profile"
+                  activeclassname="activeClicked"
                 >
                   <CDBSidebarMenuItem textFontSize="18px">
                     Favorites
                   </CDBSidebarMenuItem>
                 </NavLink>
                 <NavLink
-                  exact
-                  to="/logout"
-                  target="_blank"
-                  activeClassName="activeClicked"
+                  to="/"
+                  activeclassname="activeClicked"
+                  onClick={logout}
                 >
                   <CDBSidebarMenuItem textFontSize="18px">
                     Logout
@@ -104,10 +110,20 @@ function Profile() {
             </CDBSidebarContent>
           </CDBSidebar>
         </div>
-        <div className='profile-right-column'>
-                    <h1 style={{ fontFamily: "cursive", padding: "20px" }}>My Favorites</h1>
-                    <FavoritesList />
+        <div className="profile-right-column">
+          My Favorites
+          {favorites.length > 0 ? (
+            favorites.map((favorite, index) => {
+              return (
+                <div key={index} className="card-container">
+                  <VideoItem video={favorite} />
                 </div>
+              );
+            })
+          ) : (
+            <div>Your list is empty. Start adding your favorite videos.</div>
+          )}
+        </div>
       </div>
     </div>
   );
