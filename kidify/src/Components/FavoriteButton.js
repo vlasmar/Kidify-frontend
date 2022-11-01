@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { CDBBtn } from 'cdbreact';
-import React, { useEffect, useState } from "react";
-import favorite from "../Images/favorite.png";
-import favorited from "../Images/favorite-pressed.png";
+import React, { useState } from "react";
+import Favorite from "../Images/favorite.png";
+import FavoriteImage from "../Images/favorite-pressed.png";
 
-function FavoriteButton({ userFrom, videoId, videoInfo }) {
-  const [Favorited, setFavorited] = useState(false);
+function FavoriteButton({ user, userFrom, videoId, videoInfo }) {
+  const [favorite, setFavorite] = useState(user?.favorites.includes(videoId));
 
   const variable = {
     videoId: videoId,
@@ -17,28 +17,16 @@ function FavoriteButton({ userFrom, videoId, videoInfo }) {
     category: videoInfo.category,
     userFrom: userFrom
     }
-
-  useEffect(() => {
-    axios.post(`http://localhost:4000/users/profile/favorites/favorited`, variable, {
-      withCredentials: true
-    })
-    .then(res => {
-      if(res.data) {
-        setFavorited(res.data.favorited)
-      } else {
-        alert('Failed to get favorite info')
-      }
-    })
-  }, [])
+    console.log(user?.favorites.includes(videoId))
 
   const onClickFavorite = () => {
-    if (Favorited) {
+    if (favorite) {
       axios.put(`http://localhost:4000/users/profile/favorites/removeFromFavorites`, variable, {
         withCredentials: true
       })
       .then(res => {
         if(res.data) {
-          setFavorited(!Favorited)
+          setFavorite(!favorite)
         } else {
           alert('Failed to remove from favorites')
         }
@@ -50,7 +38,7 @@ function FavoriteButton({ userFrom, videoId, videoInfo }) {
       })
       .then(res => {
         if(res.data) {
-          setFavorited(!Favorited)
+          setFavorite(!favorite)
         } else {
           alert('Failed to add to favorites')
         }
@@ -61,7 +49,7 @@ function FavoriteButton({ userFrom, videoId, videoInfo }) {
   return (
       <div>
         <CDBBtn className="favorite-button" onClick={onClickFavorite}>
-          {Favorited ? <img src={favorited} alt="favorited" /> : <img src={favorite} alt="favorite"/>}
+          {favorite ? <img src={FavoriteImage} alt="favorited" /> : <img src={Favorite} alt="notfavorite"/>}
       </CDBBtn>
       </div>
   );

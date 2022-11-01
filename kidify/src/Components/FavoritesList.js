@@ -1,34 +1,19 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import VideoItem from "./VideoItem";
 
-function FavoritesList() {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`http://localhost:4000/users/profile/favorites`, {
-        withCredentials: true,
-      })
-      .then((response) => {
-        console.log(response.data);
-        setFavorites(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+function FavoritesList({user}) {
 
   return (
     <div>
-        {favorites.map((favorite) => {
-          return (
-            <div className="card-container">
-              <VideoItem video={favorite} />
-            </div>
-          );
-        })}
+        {user.favorites.length > 0 ? (
+          user.favorites.map((favorite, index) => {
+            return <div key={index} className="card-container"><VideoItem video={favorite} /></div>;
+          })
+        ) : (
+          <div>
+            Your list is empty. Start adding your favorite videos.
+          </div>
+        )}
     </div>
   );
 }

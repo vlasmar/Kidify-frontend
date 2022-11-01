@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const VideoPage = () => {
+const VideoPage = ({user}) => {
     const [videoInfo, setVideoInfo] = useState();
     const { id } = useParams();
-
+   
     useEffect(() => {
         axios
             .get(`http://localhost:4000/videos/${id}`)
@@ -28,7 +28,7 @@ const VideoPage = () => {
                     <div className='video_details'>
                         <div className='video_title'>
                             <h2>{videoInfo.title}</h2>
-                            <FavoriteButton userFrom={localStorage.getItem('userId')} videoId = {videoInfo._id} videoInfo = {videoInfo}  />
+                            <FavoriteButton user={user} videoId = {videoInfo._id} videoInfo = {videoInfo}  />
                         </div>
                         <hr />
                         <h4>{videoInfo.artist}</h4>
