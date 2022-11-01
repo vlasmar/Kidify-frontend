@@ -4,33 +4,33 @@ import axios from "axios";
 import VideoItem from "./VideoItem";
 
 function FavoritesList() {
-  const [favorites, setFavorites] = useState([]);
+    const [favorites, setFavorites] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:4000/users/profile/favorites`, {
-        withCredentials: true,
-      })
-      .then((response) => {
-        console.log(response.data);
-        setFavorites(response.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    useEffect(() => {
+        axios
+            .get(`http://localhost:4000/users/profile/favorites`, {
+                withCredentials: true,
+            })
+            .then((response) => {
+                console.log(response.data);
+                setFavorites(response.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }, []);
 
-  return (
-    <div>
-        {favorites.map((favorite) => {
-          return (
-            <div className="card-container">
-              <VideoItem video={favorite} />
-            </div>
-          );
-        })}
-    </div>
-  );
+    return (
+        <div className='profile-video-cards'>
+            {favorites.map((favorite) => {
+                return (
+                    <div className='card-container-profile'>
+                        <VideoItem video={favorite} />
+                    </div>
+                );
+            })}
+        </div>
+    );
 }
 
 export default FavoritesList;
