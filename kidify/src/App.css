@@ -40,7 +40,11 @@ html {
     padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
     color: var(--bs-card-color);
     position: relative;
-    height: 200px;
+    height: 180px;
+}
+
+.video-item-clickable{
+    cursor: pointer;
 }
 
 .profile-video-cards {
@@ -98,14 +102,19 @@ html {
 }
 
 .playlist_icon {
-    position: absolute;
-    bottom: 10px;
+    cursor: pointer;
+    padding-top: 18px;
     right: 2%;
+    background-color: transparent;
 }
 
 .playlist_icon img {
     float: right;
-    width: 60px;
+    width: 50px;
+}
+
+.playlist_icon:hover{
+    transform: scale(1.3) !important;
 }
 
 /* 0-3, 4-5, 6-7 card container section */
@@ -189,7 +198,7 @@ html {
 }
 
 .favorite-button img {
-    width: 50px;
+    width: 60px;
 }
 
 .video_description,
@@ -331,6 +340,10 @@ input[type="search"]:focus {
     --bs-card-spacer-y: 3rem;
 }
 
+.card-img, .card-img-top{
+    height: 24rem;
+}
+
 .footer {
     background-color: #fffde3;
 }
@@ -469,23 +482,59 @@ form,
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    height: auto;
+    height: 1060px;
+    display: flex;
 }
 
 .profile-mainpage {
     display: flex;
 }
 
-.video-cards-profile {
+.profile-right-column {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 1100px;
+}
+
+.profile-title h1 {
+    color: #000000;
+    text-align: center;
+}
+.profile-video-cards {
     display: flex;
-    padding: 20px 0;
+    padding: 30px 30px;
     flex-flow: row;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
-.playlists-title {
-    padding-left: 1.8em;
+.card-container-profile {
+    width: 300px;
+    margin: 15px;
+    border: 3.5px solid rgb(42, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.card-container-profile h4 {
+    padding-left: 25px;
+    text-align: left;
+    font-family: cursive;
+    font-weight: 500;
+    /* color: #ffffff; */
+    color: black;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.profile-video-cards img {
+    width: 100%;
+}
+
+.profile-video-cards a {
+    text-decoration: none;
 }
 
 .agespage {
@@ -497,3 +546,49 @@ form,
     background-attachment: fixed;
     height: auto;
 }
+
+.nav-menu {
+    background-color: #060b26;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+  }
+  
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  .nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+  
+  .nav-text a:hover {
+    background-color: #1a83ff;
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+  }

@@ -15,7 +15,7 @@ import FavoritesList from "./Components/FavoritesList";
 import Protected from "./Components/Protected";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Playlist from "./Components/Playlist";
+import CreatePlaylist from "./Components/CreatePlaylist";
 
 function App() {
   const [data, setData] = useState([]);
@@ -67,9 +67,9 @@ function App() {
           element={<Homepage data={shownData} user={user} setUser={setUser}/>}
         />
         <Route path="/profile" element={<Protected user={user} />}>
-          <Route index element={<Profile loading={loading}/>} />
+          <Route index element={<Profile setUser={setUser} loading={loading}/>} />
           <Route path="favorites" element={<FavoritesList user={user}/>} />
-          <Route path="playlists" element={<Playlist />} />
+          <Route path="create-playlist" element={<CreatePlaylist user={user}/>} />
         </Route>
         <Route path="/preschool" element={<Page03 data={shownData} />} />
         <Route path="/grade-k" element={<Page45 data={shownData} />} />
